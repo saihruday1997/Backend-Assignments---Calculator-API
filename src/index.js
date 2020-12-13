@@ -17,6 +17,12 @@ app.get("/" , (req, res) => {
     res.send("Hello world!")
 });
 
+app.post("/add" , (req,res) => {
+    let num1 = req.body.num1;
+    let num2 = req.body.num2;
+
+    res.json({status:"success",message:"the sum of given two numbers",sum: num1+num2});
+});
 
 app.listen(port, () => console.log(`App listening on port ${port}!`))
 
