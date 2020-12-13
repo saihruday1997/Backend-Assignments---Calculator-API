@@ -28,21 +28,21 @@ app.post("/sub" , (req,res) => {
     let num1 = req.body.num1;
     let num2 = req.body.num2;
 
-    res.json({status:"success",message:"the difference of given two numbers",sum: num1-num2});
+    res.json({status:"success",message:"the difference of given two numbers",difference: num1-num2});
 });
 
 app.post("/multiply" , (req,res) => {
     let num1 = req.body.num1;
     let num2 = req.body.num2;
 
-    res.json({status:"success",message:"The product of given numbers",sum: num1*num2});
+    res.json({status:"success",message:"The product of given numbers",result: num1*num2});
 });
 
 app.post("/divide" , (req,res) => {
     let num1 = req.body.num1;
     let num2 = req.body.num2;
 
-    res.json({status:"success",message:"The division of given numbers",sum: num1/num2});
+    res.json({status:"success",message:"The division of given numbers",result: num1/num2});
 });
 
 app.listen(port, () => console.log(`App listening on port ${port}!`))
